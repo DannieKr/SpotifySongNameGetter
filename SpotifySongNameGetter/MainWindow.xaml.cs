@@ -33,8 +33,16 @@ namespace SpotifySongNameGetter
 
         private string GetSpotifySongName()
         {
-            var proc = Process.GetProcessesByName("Spotify").FirstOrDefault(p => !string.IsNullOrWhiteSpace(p.MainWindowTitle));
-            return proc.MainWindowTitle;
+            try
+            {
+                var proc = Process.GetProcessesByName("Spotify").FirstOrDefault(p => !string.IsNullOrWhiteSpace(p.MainWindowTitle));
+                return proc.MainWindowTitle;
+            }
+            catch
+            {
+                MessageBox.Show("No Spotify process was found! Please open Spotify and DON'T minimize it to tray");
+                return "";
+            }
         }
 
         private void BtnCheckAndClipboard_Click(object sender, RoutedEventArgs e)

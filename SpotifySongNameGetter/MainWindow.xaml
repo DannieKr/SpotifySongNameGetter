@@ -15,12 +15,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="0.25*"></ColumnDefinition>
-            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox Margin="5" x:Name="txtBox" Grid.Column="0" Grid.Row="1" Text="Songname" Grid.RowSpan="2" FontFamily="Arial" FontSize="20"/>
-        <Button Margin="5" x:Name="start" Content="Check" Grid.Column="1" Grid.Row="1" Click="BtnCheck_Click" Grid.RowSpan="2" MinWidth="10" MinHeight="10"/>
-        <Button Margin="5" x:Name="btnCheckAndClipboard" Content="Check and copy to clipboard" Grid.Row="1" Click="BtnCheckAndClipboard_Click" Grid.Column="2" Grid.RowSpan="2"/>
-        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+        <TextBox Margin="5" x:Name="txtBox" Grid.Column="0" Grid.Row="1" Text="press get name ---->" Grid.RowSpan="2" FontFamily="Arial" FontSize="20"/>
+        <Button Margin="5" x:Name="start" Content="Get name" Grid.Column="1" Grid.Row="1" Click="BtnCheck_Click" Grid.RowSpan="2" MinWidth="10" MinHeight="10"/>
+        <Button Margin="5" x:Name="btnCheckAndClipboard" Content="Get name and copy to clipboard" Grid.Row="1" Click="BtnCheckAndClipboard_Click" Grid.Column="2" Grid.RowSpan="2"/>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top">
             <MenuItem Header="Info">
                 <MenuItem Header="About" Click="MenuItemAbout_Click"></MenuItem>
                 <MenuItem Header="Close" Click="MenuItemAbout_Close"></MenuItem>
