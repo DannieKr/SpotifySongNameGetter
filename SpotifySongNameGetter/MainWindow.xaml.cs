@@ -41,7 +41,7 @@ namespace SpotifySongNameGetter
             catch
             {
                 MessageBox.Show("No Spotify process was found! Please open Spotify and DON'T minimize it to tray");
-                return "";
+                return txtBox.Text;
             }
         }
 
