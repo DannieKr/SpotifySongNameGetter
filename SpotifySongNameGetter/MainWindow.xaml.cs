@@ -26,26 +26,32 @@ namespace SpotifySongNameGetter
             InitializeComponent();
         }
 
-        private void btnCheck_Click(object sender, RoutedEventArgs e)
+        private void BtnCheck_Click(object sender, RoutedEventArgs e)
         {
-            txtBox.Text = getSpotifySongName();
+            txtBox.Text = GetSpotifySongName();
         }
 
-        private string getSpotifySongName()
+        private string GetSpotifySongName()
         {
             var proc = Process.GetProcessesByName("Spotify").FirstOrDefault(p => !string.IsNullOrWhiteSpace(p.MainWindowTitle));
             return proc.MainWindowTitle;
         }
 
-        private void btnCheckAndClipboard_Click(object sender, RoutedEventArgs e)
+        private void BtnCheckAndClipboard_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(getSpotifySongName());
-            txtBox.Text = getSpotifySongName();
+            Clipboard.SetText(GetSpotifySongName());
+            txtBox.Text = GetSpotifySongName();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItemAbout_Close(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void MenuItemAbout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/DannieKr/SpotifySongNameGetter");
+            e.Handled = true;
         }
     }
 }
